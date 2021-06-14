@@ -6,12 +6,9 @@ This repository demonstrates a possible Next.js bug related to CSS optimization.
 
 1. Bootstrap an app: `npx create-next-app`
 2. Set up some components with their own CSS
-  * See Button, List components in [./components/].
-  * These components use CSS Modules. Next.js creates separate CSS output for
-    these by default.
-3. Add mini-css-extract-plugin's
-[instructions for "Extracting all CSS in a single file"](https://github.com/webpack-contrib/mini-css-extract-plugin#extracting-all-css-in-a-single-file)
-  to the project's [`next.config.js`](./next.config.js)
+    * See Button, List components in [./components/](./components).
+    * These components use CSS Modules. Next.js creates separate CSS output for these by default.
+3. Add mini-css-extract-plugin's [instructions for "Extracting all CSS in a single file"](https://github.com/webpack-contrib/mini-css-extract-plugin#extracting-all-css-in-a-single-file) to the project's [`next.config.js`](./next.config.js)
 4. Run a build: `npm run build`
 5. Start the app: `npm start`
 
