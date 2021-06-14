@@ -1,0 +1,71 @@
+.button {
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 1;
+  margin: 0;
+  text-decoration: none;
+  transition-duration: 150ms;
+  transition-property: background border-color color;
+
+  &[disabled] {
+    cursor: default;
+  }
+}
+
+// Size
+
+.small {
+  font-size: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.large {
+  font-size: 112.5%;
+  padding: 0.75rem 1.5rem;
+}
+
+// Variant
+
+.primary {
+  border-color: transparent;
+  background: royalblue;
+  color: white;
+
+  &:focus,
+  &:hover {
+    background: blue;
+  }
+  &:active {
+    background: navy;
+  }
+
+  &[disabled] {
+    background: silver;
+  }
+}
+
+.secondary {
+  background: white;
+  border-color: black;
+  color: black;
+
+  &:focus,
+  &:hover {
+    border-color: blue;
+    color: blue;
+  }
+  &:active {
+    border-color: navy;
+    color: navy;
+  }
+
+  &[disabled] {
+    border-color: silver;
+    color: silver;
+  }
+}

@@ -1,0 +1,26 @@
+.listItem {
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+}
+
+.title {
+  color: black;
+  display: block;
+  font-family: inherit;
+  font-size: 112.5%;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+.content {
+  color: dimgray;
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+
+  .title + & {
+    margin-top: 0.25rem;
+  }
+}
