@@ -2,6 +2,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+import { Button } from '../components/Button'
+import { ButtonGroup } from '../components/ButtonGroup'
+import { List } from '../components/List'
+import { ListItem } from '../components/ListItem'
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -20,6 +25,26 @@ export default function Home() {
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
+
+        <div className={styles.customComponents}>
+          <ButtonGroup>
+            <Button variant="primary">Primary (small)</Button>
+            <Button>Secondary (small)</Button>
+            <Button size="large" variant="primary">Primary (large)</Button>
+            <Button size="large">Secondary (large)</Button>
+          </ButtonGroup>
+          <List>
+            <ListItem title="Lorem ipsum dolor sit amet">
+              Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </ListItem>
+            <ListItem title="Ut enim ad minim veniam">
+              Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </ListItem>
+            <ListItem title="Duis aute irure dolor">
+              In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </ListItem>
+          </List>
+        </div>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
