@@ -1,3 +1,58 @@
+# next-css-modules-single-file
+
+This repository demonstrates a possible Next.js bug related to CSS optimization.
+
+## Steps
+
+1. Bootstrap an app: `npx create-next-app`
+2. Set up some components with their own CSS
+  * See Button, List components in [./components/].
+  * These components use CSS Modules. Next.js creates separate CSS output for
+    these by default.
+3. Add mini-css-extract-plugin's
+[instructions for "Extracting all CSS in a single file"](https://github.com/webpack-contrib/mini-css-extract-plugin#extracting-all-css-in-a-single-file)
+  to the project's [`next.config.js`](./next.config.js)
+4. Run a build: `npm run build`
+5. Start the app: `npm start`
+
+## Expected
+
+The built Next.js server serves a single CSS file for the app.
+
+## Observed
+
+The Next.js build fails:
+
+```shell
+$ npm run build
+
+> next-css-modules-single-file@0.1.0 build
+> next build
+
+info  - Using webpack 4. Reason: custom webpack configuration in next.config.js https://nextjs.org/docs/messages/webpack5
+info  - Checking validity of types
+Found more than one file in server entrypoint pages/_app [ 'styles.js', 'pages/_app.js' ]
+Found more than one file in server entrypoint pages/index [ 'styles.js', 'pages/index.js' ]
+info  - Creating an optimized production build
+info  - Compiled successfully
+info  - Collecting page data .node:internal/process/promises:246
+          triggerUncaughtException(err, true /* fromPromise */);
+          ^
+
+Error: Cannot find module for page: /_app
+    at pageNotFoundError (/Users/dudeman/next-css-modules-single-file/node_modules/next/dist/next-server/server/require.js:1:454)
+    at getPagePath (/Users/dudeman/next-css-modules-single-file/node_modules/next/dist/next-server/server/require.js:1:1263)
+    at requirePage (/Users/dudeman/next-css-modules-single-file/node_modules/next/dist/next-server/server/require.js:1:1397)
+    at loadComponents (/Users/dudeman/next-css-modules-single-file/node_modules/next/dist/next-server/server/load-components.js:1:1365)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Object.hasCustomGetInitialProps (/Users/dudeman/next-css-modules-single-file/node_modules/next/dist/build/utils.js:26:1276) {
+  type: 'Error',
+  code: 'ENOENT'
+}
+```
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
