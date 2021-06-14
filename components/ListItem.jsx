@@ -1,6 +1,6 @@
 import classNames from "classnames";
 
-import * as style from "./ListItem.module.scss";
+import * as style from "./ListItem.module.css";
 
 /**
  * List Item, the item for List.

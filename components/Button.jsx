@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import classNames from "classnames";
 
-import * as style from "./Button.module.scss";
+import * as style from "./Button.module.css";
 
 /**
  * Button, the base interactive component.

@@ -1,7 +1,7 @@
 import { Children } from "react";
 import classNames from "classnames";
 
-import * as style from "./List.module.scss";
+import * as style from "./List.module.css";
 
 /**
  * List, a collection of related items.

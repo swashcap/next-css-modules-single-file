@@ -1,6 +1,6 @@
 import classNames from "classnames";
 
-import * as style from "./ButtonGroup.module.scss";
+import * as style from "./ButtonGroup.module.css";
 
 /**
  * Button Group, a spacing utility for Buttons.

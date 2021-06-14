@@ -11,13 +11,13 @@
   text-decoration: none;
   transition-duration: 150ms;
   transition-property: background border-color color;
-
-  &[disabled] {
-    cursor: default;
-  }
 }
 
-// Size
+.button[disabled] {
+  cursor: default;
+}
+
+/* Size */
 
 .small {
   font-size: 100%;
@@ -29,43 +29,43 @@
   padding: 0.75rem 1.5rem;
 }
 
-// Variant
+/* Variant */
 
 .primary {
   border-color: transparent;
   background: royalblue;
   color: white;
+}
 
-  &:focus,
-  &:hover {
-    background: blue;
-  }
-  &:active {
-    background: navy;
-  }
+.primary:focus,
+.primary:hover {
+  background: blue;
+}
+.primary:active {
+  background: navy;
+}
 
-  &[disabled] {
-    background: silver;
-  }
+.primary[disabled] {
+  background: silver;
 }
 
 .secondary {
   background: white;
   border-color: black;
   color: black;
+}
 
-  &:focus,
-  &:hover {
-    border-color: blue;
-    color: blue;
-  }
-  &:active {
-    border-color: navy;
-    color: navy;
-  }
+.secondary:focus,
+.secondary:hover {
+  border-color: blue;
+  color: blue;
+}
+.secondary:active {
+  border-color: navy;
+  color: navy;
+}
 
-  &[disabled] {
-    border-color: silver;
-    color: silver;
-  }
+.secondary[disabled] {
+  border-color: silver;
+  color: silver;
 }

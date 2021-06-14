@@ -19,8 +19,8 @@
   font-size: 100%;
   font-weight: inherit;
   line-height: inherit;
+}
 
-  .title + & {
-    margin-top: 0.25rem;
-  }
+.title + .content {
+  margin-top: 0.25rem;
 }
